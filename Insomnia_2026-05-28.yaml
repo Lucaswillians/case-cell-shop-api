@@ -1,0 +1,284 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: casecell
+meta:
+  id: wrk_679ab579e98a4689a4ea623a52ccc9f6
+  created: 1779926341082
+  modified: 1779926341082
+  description: ""
+collection:
+  - name: products
+    meta:
+      id: fld_08a6b3e636044370a0826926a1509935
+      created: 1779926350207
+      modified: 1779926350207
+      sortKey: -1779926350207
+      description: ""
+    children:
+      - url: http://localhost:3000/products/7cc1ac0e-6528-4396-b199-0b18d003f749
+        name: New Request
+        meta:
+          id: req_e62490700def42d39fa857d3e3b4bf17
+          created: 1779926352845
+          modified: 1779926940353
+          isPrivate: false
+          description: ""
+          sortKey: -1779926355531
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: >-
+            {
+              "name": "capinha show",
+              "description": "capa para iphone 17 com detalhes em metal para proteção",
+              "quantity": 20,
+              "price": 100
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/products/7cc1ac0e-6528-4396-b199-0b18d003f749
+        name: New Request
+        meta:
+          id: req_d6153edce4bb4dcbbe15571a2c4e2380
+          created: 1779926354749
+          modified: 1779926958261
+          isPrivate: false
+          description: ""
+          sortKey: -1779926354749
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/products
+        name: New Request
+        meta:
+          id: req_6f06a631b9464dc2a2b7d80b34bc4e10
+          created: 1779926356313
+          modified: 1779926611933
+          isPrivate: false
+          description: ""
+          sortKey: -1779926356313
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/products
+        name: New Request
+        meta:
+          id: req_0e55dfaa0a7841e086bfd3fb8c50e46f
+          created: 1779926375739
+          modified: 1779987103608
+          isPrivate: false
+          description: ""
+          sortKey: -1779926375739
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "capinha acrilico",
+              "description": "capa para iphone 17 acrilico",
+              "quantity": 10,
+              "price": 100
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/products/c7d80794-337d-4236-ae59-7b2b16d60937
+        name: New Request
+        meta:
+          id: req_602d062b8e6f4c33a83d98f3f27be3ce
+          created: 1779926972773
+          modified: 1779927029723
+          isPrivate: false
+          description: ""
+          sortKey: -1779926366026
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: orders
+    meta:
+      id: fld_9e8d92fa96c8481e9976884d50576410
+      created: 1779928151416
+      modified: 1779987036116
+      sortKey: -1779928151416
+      description: ""
+    children:
+      - url: http://localhost:3000/checkout/1ae94ee9-d51f-445f-9c57-6267d26116f0
+        name: New Request
+        meta:
+          id: req_a4c93dbad5dc4e76b09fdc8d743e0816
+          created: 1779928153950
+          modified: 1779928405579
+          isPrivate: false
+          description: ""
+          sortKey: -1779928153951
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/orders
+        name: New Request
+        meta:
+          id: req_d87d3632c7d044849c37f284d7716ef5
+          created: 1779928162732
+          modified: 1779987163840
+          isPrivate: false
+          description: ""
+          sortKey: -1779928162732
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/orders
+        name: New Request
+        meta:
+          id: req_e40a0db1cdc24809833daec154c22437
+          created: 1779928165230
+          modified: 1779998763582
+          isPrivate: false
+          description: ""
+          sortKey: -1779928165230
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "customerName": "peter",
+              "street": "Rua A",
+              "city": "Barra Velha",
+              "zipCode": "88390000",
+              "items": [
+                {
+                  "productId": "0f5c290c-7805-4de8-afe0-cea8b08115e5",
+                  "quantity": 20
+                }
+              ]
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/checkout/1ae94ee9-d51f-445f-9c57-6267d26116f0/cancel
+        name: New Request
+        meta:
+          id: req_7770f630c15b4ce8b94a6a68c7f88381
+          created: 1779928411522
+          modified: 1779928440223
+          isPrivate: false
+          description: ""
+          sortKey: -1779928153851
+        method: PATCH
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_e4608d1049517fe01f272771b58c6134ab2f22ed
+    created: 1779926341105
+    modified: 1779926341105
+environments:
+  name: Base Environment
+  meta:
+    id: env_e4608d1049517fe01f272771b58c6134ab2f22ed
+    created: 1779926341093
+    modified: 1779926341093
+    isPrivate: false
