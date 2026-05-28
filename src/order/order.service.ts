@@ -131,7 +131,11 @@ export class OrderService {
     try {
       const order = await this.orderRepository.findOne({
         where: { id },
-        relations: { items: true },
+        relations: {
+          items: {
+            product: true,
+          },
+        },
       });
 
       if (!order) {
