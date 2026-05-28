@@ -25,10 +25,32 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+### Features
+- **Redis Cache**: Cache implementado nos endpoints GET de products e checkout
+- **Rate Limiting**: Rate limiting configurado na API de checkout com @nestjs/throttler
+- **PostgreSQL**: Banco de dados relacional
+- **TypeORM**: ORM para gerenciamento de dados
+
 ## Project setup
 
 ```bash
 $ npm install
+```
+
+## Environment Setup
+
+Copie `.env.example` para `.env` e configure suas variáveis:
+
+```bash
+cp .env.example .env
+```
+
+### Docker Compose
+
+Inicie os serviços (PostgreSQL e Redis):
+
+```bash
+docker-compose up -d
 ```
 
 ## Compile and run the project
@@ -69,6 +91,24 @@ $ mau deploy
 ```
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+
+## Features Documentation
+
+### Redis Cache
+Cache implementado nos endpoints GET de products e checkout para melhor performance:
+- **Products GET**: TTL 10 minutos
+- **Checkout GET**: TTL 5 minutos
+
+Veja [RATE_LIMITING.md](./RATE_LIMITING.md) para mais detalhes.
+
+### Rate Limiting
+Rate limiting configurado em toda a API de checkout para proteger contra abuso:
+- **POST /checkout**: 5 requisições por minuto
+- **GET /checkout**: 30 requisições por minuto
+- **GET /checkout/:id**: 30 requisições por minuto
+- **PATCH /checkout/:id/cancel**: 10 requisições por minuto
+
+Veja [RATE_LIMITING.md](./RATE_LIMITING.md) para instruções de customização.
 
 ## Resources
 
