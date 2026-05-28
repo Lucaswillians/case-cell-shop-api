@@ -7,8 +7,6 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-import { CheckoutEntity } from '../checkout/checkout.entity';
-
 @Entity('products')
 export class ProductsEntity {
   @PrimaryGeneratedColumn('uuid')
@@ -20,24 +18,11 @@ export class ProductsEntity {
   @Column('text')
   description!: string;
 
-  @Column({
-    type: 'integer',
-    default: 0,
-  })
+  @Column({ type: 'int', default: 0 })
   quantity!: number;
 
-  @Column({
-    type: 'decimal',
-    precision: 10,
-    scale: 2,
-  })
+  @Column('decimal', { precision: 10, scale: 2 })
   price!: number;
-
-  @OneToMany(
-    () => CheckoutEntity,
-    (checkout) => checkout.product,
-  )
-  checkouts!: CheckoutEntity[];
 
   @CreateDateColumn()
   createdAt!: Date;

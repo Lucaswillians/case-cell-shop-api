@@ -1,16 +1,12 @@
 import { Module } from '@nestjs/common';
-import { APP_GUARD } from '@nestjs/core';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { CacheModule } from '@nestjs/cache-manager';
-import {
-  ThrottlerGuard,
-  ThrottlerModule,
-} from '@nestjs/throttler';
+import { ThrottlerModule } from '@nestjs/throttler';
 import * as redisStore from 'cache-manager-redis-store';
 import { PostgresConfigService } from './config/db.config.service';
 import { ProductsModule } from './products/products.module';
-import { CheckoutModule } from './checkout/checkout.module';
+import { OrderModule } from './order/order.module';
 
 @Module({
   imports: [
@@ -37,17 +33,11 @@ import { CheckoutModule } from './checkout/checkout.module';
       ttl: 600,
     }),
     ProductsModule,
-    CheckoutModule,
+    OrderModule,
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       useClass: PostgresConfigService,
     }),
-  ],
-  providers: [
-    {
-      provide: APP_GUARD,
-      useClass: ThrottlerGuard,
-    },
   ],
 })
 export class AppModule { }
